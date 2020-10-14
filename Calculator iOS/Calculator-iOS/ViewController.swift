@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Calculator_framework
+import Calculator
 
 class ViewController: UIViewController {
 
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         let valueX = Int(valueXTextField.text?.removeNonNumerics() ?? "0") ?? 0
         let valueY = Int(valueYTextField.text?.removeNonNumerics() ?? "0") ?? 0
 
-        let result = calculator?.multitply(valueX, with: valueY) ?? 0
+      let result = calculator?.multiply(valueX, by: valueY) ?? 0
 
         resultValueLabel.text = String(result)
         resignFirstResponder()

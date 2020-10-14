@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6035BBBB253697A300A74268 /* Calculator in Frameworks */ = {isa = PBXBuildFile; productRef = 6035BBBA253697A300A74268 /* Calculator */; };
 		6F5E81E92376017000472777 /* Calculator_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5E81E82376017000472777 /* Calculator_iOSUITests.swift */; };
 		6F8C0D822376024B00064590 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C0D792376024B00064590 /* ViewController.swift */; };
 		6F8C0D832376024B00064590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F8C0D7A2376024B00064590 /* Assets.xcassets */; };
@@ -16,8 +17,6 @@
 		6F8C0D882376024B00064590 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C0D812376024B00064590 /* SceneDelegate.swift */; };
 		6F8C0D8C2376025700064590 /* Calculator_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C0D8A2376025700064590 /* Calculator_iOSTests.swift */; };
 		6F8C0D8D2376025700064590 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F8C0D8B2376025700064590 /* Info.plist */; };
-		6F8C0D90237602CE00064590 /* Calculator_framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8C0D8F237602CE00064590 /* Calculator_framework.framework */; };
-		6F8C0D91237602CE00064590 /* Calculator_framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8C0D8F237602CE00064590 /* Calculator_framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,21 +36,8 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		6F8C0D92237602CE00064590 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				6F8C0D91237602CE00064590 /* Calculator_framework.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		6035BBB62536979200A74268 /* Calculator-SPM */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Calculator-SPM"; path = "../Calculator-SPM"; sourceTree = "<group>"; };
 		6F5E81C32376016D00472777 /* Calculator iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calculator iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F5E81D92376017000472777 /* Calculator iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calculator iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F5E81E42376017000472777 /* Calculator iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calculator iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F8C0D90237602CE00064590 /* Calculator_framework.framework in Frameworks */,
+				6035BBBB253697A300A74268 /* Calculator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +84,7 @@
 		6F5E81BA2376016D00472777 = {
 			isa = PBXGroup;
 			children = (
+				6035BBB62536979200A74268 /* Calculator-SPM */,
 				6F8C0D782376024B00064590 /* Calculator-iOS */,
 				6F8C0D892376025700064590 /* Calculator-iOSTests */,
 				6F5E81E72376017000472777 /* Calculator iOSUITests */,
@@ -166,13 +153,15 @@
 				6F5E81BF2376016D00472777 /* Sources */,
 				6F5E81C02376016D00472777 /* Frameworks */,
 				6F5E81C12376016D00472777 /* Resources */,
-				6F8C0D92237602CE00064590 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Calculator iOS";
+			packageProductDependencies = (
+				6035BBBA253697A300A74268 /* Calculator */,
+			);
 			productName = "Calculator iOS";
 			productReference = 6F5E81C32376016D00472777 /* Calculator iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -245,6 +234,8 @@
 				Base,
 			);
 			mainGroup = 6F5E81BA2376016D00472777;
+			packageReferences = (
+			);
 			productRefGroup = 6F5E81C42376016D00472777 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -620,6 +611,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6035BBBA253697A300A74268 /* Calculator */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Calculator;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6F5E81BB2376016D00472777 /* Project object */;
 }

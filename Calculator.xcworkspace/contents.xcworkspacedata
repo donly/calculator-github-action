@@ -4,7 +4,4 @@
    <FileRef
       location = "group:Calculator iOS/Calculator iOS.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:Calculator-framework/Calculator-framework.xcodeproj">
-   </FileRef>
 </Workspace>
